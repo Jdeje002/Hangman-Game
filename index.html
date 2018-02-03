@@ -1,0 +1,52 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+    body{
+        background-image: url("assets/images/Sunset.jpg");
+        height: 100%;
+        width: 100%;
+    }
+    .jumbotron{
+        background-image: url("assets/images/wood.jpg");
+        margin: 60px;
+    }
+    ,underscore{
+        {
+        border : 3px solid black;
+        font-size: 50px;
+        text-align: center;
+        margin: 0 auto;
+        height: 150px; 
+        width: 80%;}
+    }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="jumbotron text-white text-center">
+                <h1 class="display-4">Try your best!</h1>
+                <h2>Press any key to start</h2>
+                <h3 class="lead"> The theme is the Wild west.</h3>
+                <hr class="my-4">
+                <p>Guess the letters correctly and your home free partner!</p>
+                
+                <div class="underscore"> <h3> _ _ _ _ </h3></div>
+                <div class="rightGuess"> Right guess</div>
+                <div class="wrongGuess"> Wrong guess</div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <script src="assets/javascript/game.js" ></script>
+
+</body>
+</html>

@@ -10,6 +10,7 @@ var rightWord = [];
 var wrongWord = [];
 var wordsplit = []
 var wrongGuess= 10
+var userLoss = 0
 // dom manipulation 
 var docUnderScore = document.getElementsByClassName("underscore");
 
@@ -18,7 +19,7 @@ console.log(chosenWord)
 // Create underscore
 var generateUnderscore = function() {
     for( var i = 0; i< chosenWord.length; i++){
-        underScore.push("_");
+        underScore.push(" _ ");
        
     }
         return underScore;
@@ -49,7 +50,13 @@ document.addEventListener("keypress", (event) => {
         if( wrongGuess == 0){
             //10 guess = failed
             alert("Game over! Reset page")
-            
+            if(confirm("Want to play again?")){
+                wrongGuess = 10
+                userLoss ++
+                $(".userLoss").html("Total Losses: " + userLoss )
+                $(".wrongGuess").html(wrongGuess + " = total guesses ")
+                // reset words
+            }
            
         }
     
@@ -59,8 +66,3 @@ document.addEventListener("keypress", (event) => {
 });
 
 underScore.innerHTML = generateUnderscore().join(" ");
-
-
-
-
-

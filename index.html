@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,16 +14,7 @@
     }
     .jumbotron{
         background-image: url("assets/images/wood.jpg");
-        margin: 60px;
-    }
-    .underscore{
-        
-        border : 3px solid black;
-        font-size: 50px;
-        text-align: center;
-        margin: 0 auto;
-        height: 150px; 
-        width: 80%;}
+        margin: 100px;
     }
     </style>
 </head>
@@ -32,27 +23,20 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="jumbotron text-white text-center">
-                <h1 class="display-4">Try your best!</h1>
-                <h2>Press any key to start</h2>
-                <h3 class="lead"> The theme is the Wild west.</h3>
+                <h1 class="display-4">Hangman!</h1>
+                <h3 class="lead"> It's simple, get the letters right and try not to die.</h3>
                 <hr class="my-4">
                 <p>Guess the letters correctly and your home free partner!</p>
-                <br><hr>
-                <div class="underscore"> <h3> _ _ _ _ </h3></div>
-                <div class="rightGuess"> </div>
-                <div class="wrongGuess"> Wrong Guess</div>
-                <br><hr>
-                <h3>Score</h3><hr>
-                <div class="userLoss"></div>
-                <div class="usersWins"></div>
-                
-            
+                <p class="lead ">
+                  <a class="btn btn-warning btn-lg align-middle  " href="game.html" role="button">Play now</a>
+               
             </div>
         </div>
-        <div class="col-md-3"></div>
-    </div>
-    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
-    <script src="assets/javascript/game.js" ></script>
 
+        <div class="col-md-3"></div>
+
+    </div>
+
+    <script href="assets/javascript/game.js"></script>
 </body>
 </html>

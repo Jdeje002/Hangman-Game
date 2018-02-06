@@ -1,7 +1,7 @@
 
 
 // Create array of words 
-var wordChoice = ["gun", "outlaw","miner","poker"]
+var wordChoice = ["gun", "outlaw","miner","poker","sand"]
 // Chose words randomly
 var randNum = Math.floor(Math.random() * wordChoice.length);
 var chosenWord = wordChoice[randNum];
@@ -11,9 +11,9 @@ var wrongWord = [];
 var wordsplit = []
 var wrongGuess= 10
 var userLoss = 0
+var userWin = 0
 // dom manipulation 
-var docUnderScore = document.getElementsByClassName("underscore");
-
+var docUnderScore = document.getElementsByClassName("underscore")
 
 console.log(chosenWord)
 // Create underscore
@@ -38,6 +38,8 @@ document.addEventListener("keypress", (event) => {
 
         if(underScore.join("") == chosenWord){
             alert("You win! Reset page");
+            userWin++
+            $(".usersWins").html(userWin + " total wins.")
             
         }
        
@@ -49,13 +51,13 @@ document.addEventListener("keypress", (event) => {
         console.log(wrongGuess)
         if( wrongGuess == 0){
             //10 guess = failed
-            alert("Game over! Reset page")
+            alert("Game over!")
             if(confirm("Want to play again?")){
                 wrongGuess = 10
                 userLoss ++
                 $(".userLoss").html("Total Losses: " + userLoss )
                 $(".wrongGuess").html(wrongGuess + " = total guesses ")
-                // reset words
+                // reset word
             }
            
         }
